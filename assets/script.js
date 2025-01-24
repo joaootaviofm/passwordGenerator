@@ -16,7 +16,7 @@ const symbols = "~!@#$%^&*()_+"
 generateButton.addEventListener('click', () =>{
     const resultDiv = document.getElementById('resultDiv')
     resultDiv.innerHTML = ""
-    
+
     let myChars = ''
     var password = ''
     
@@ -68,6 +68,7 @@ generateButton.addEventListener('click', () =>{
     }
 
     
+
     const newResult = document.createElement('p')
     const newButton = document.createElement('button')
 
@@ -77,5 +78,9 @@ generateButton.addEventListener('click', () =>{
     newButton.innerHTML = 'Clique para copiar'
     resultDiv.appendChild(newButton);
     
-    
+    newButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(password)
+        alert("Senha copiada para o clipboard!")
+    })
 })
+
