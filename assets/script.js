@@ -14,6 +14,8 @@ const symbols = "~!@#$%^&*()_+"
 
 
 generateButton.addEventListener('click', () =>{
+    const resultDiv = document.getElementById('resultDiv')
+    resultDiv.innerHTML = ""
     
     let myChars = ''
     var password = ''
@@ -65,7 +67,7 @@ generateButton.addEventListener('click', () =>{
         password += myChars[randomIndex]
     }
 
-    const resultDiv = document.getElementById('resultDiv')
+    
     const newResult = document.createElement('p')
     const newButton = document.createElement('button')
 
