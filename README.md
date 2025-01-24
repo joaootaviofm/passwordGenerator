@@ -9,7 +9,7 @@ Um gerador de senhas aleátorias com base nas opções que você escolhe que vai
 - Após ter a senha gerada, o usuário poderá ver o nível de força da senha.
 - Senha poderá ser copiada com somente um clique.
 
-## ❓Como usar❓
+## Como usar ❓
 
 Acesse -> 
   1) Selecione o tamanho da senha que você deseja gerar
