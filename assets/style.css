@@ -42,7 +42,8 @@ body{
     min-width: 100%;
     text-align: center;
     height: 35px;
-    border: 0.5px solid rgba(0, 0, 0, 0.329);
+    border: 0;
+    border-bottom: 1px solid black;
     font-size: 25px;
 }
 
@@ -52,7 +53,8 @@ body{
 }
 
 #inputPasswordLength{
-    height: 30px;
+    min-height: 20px;
+    width: 50px;
     text-align: center;
 }
 
@@ -90,4 +92,24 @@ label{
 #lowerCaseDiv{
     display: flex;
     gap: 15px;
+}
+
+#buttonDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#generateButton{
+    background-color: #262626;
+    color: white;
+    min-width: 100%;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+}
+
+#generateButton:hover{
+    opacity: .85;
 }
