@@ -4,6 +4,7 @@ const numberBox = document.getElementById('checkNumber')
 const upperBox = document.getElementById('checkUpper')
 const lowerBox = document.getElementById('checkLower')
 const generateButton = document.getElementById('generateButton')
+const outputPassword = document.getElementById('outputPassword')
 
 const lowercase = "abcdefghijklmnopqrstuvwxyz"
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -13,6 +14,7 @@ const symbols = "~!@#$%^&*()_+"
 
 
 generateButton.addEventListener('click', () =>{
+    
     let myChars = ''
     var password = ''
     
@@ -43,7 +45,7 @@ generateButton.addEventListener('click', () =>{
     else{
         myChars = myChars + "";
     }
-    
+
     const length = passwordLength.value
 
     for(let i=0;i<length;i++){
@@ -51,5 +53,15 @@ generateButton.addEventListener('click', () =>{
         password += myChars[randomIndex]
     }
 
-    console.log(password)
+    const resultDiv = document.getElementById('resultDiv')
+    const newResult = document.createElement('p')
+    const newButton = document.createElement('button')
+
+    newResult.innerHTML = `Sua senha gerada é: ${password}`
+    resultDiv.appendChild(newResult);
+
+    newButton.innerHTML = 'Clique para copiar'
+    resultDiv.appendChild(newButton);
+    
+    
 })
