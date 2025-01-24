@@ -22,7 +22,9 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+    border-radius: 20px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.164);
 }
 
 #topDiv{
@@ -80,3 +82,12 @@ label{
     gap: 15px;
 }
 
+#upperCaseDiv{
+    display: flex;
+    gap: 15px;
+}
+
+#lowerCaseDiv{
+    display: flex;
+    gap: 15px;
+}
