@@ -120,6 +120,8 @@ label{
     flex-direction: column;
     min-width: 100px;
     align-items: center;
+    gap: 10px;
+    margin-top: 50px;
 }
 
 #resultDiv p{
@@ -135,6 +137,7 @@ label{
     border-radius: 10px;
     cursor: pointer;
     transition: opacity .3s ease-in-out;
+    border: none;
 }
 
 #resultDiv button:hover{
