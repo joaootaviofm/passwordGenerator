@@ -5,7 +5,6 @@
     box-sizing: border-box;
     padding: 0;
     font-family: Smooch Sans;
-    font-size: 35px;
 }
 
 
@@ -41,7 +40,8 @@ body{
     min-width: 100%;
     text-align: center;
     height: 35px;
-    border: 0.5px solid rgba(0, 0, 0, 0.329)
+    border: 0.5px solid rgba(0, 0, 0, 0.329);
+    font-size: 25px;
 }
 
 #includeDiv {
@@ -72,5 +72,11 @@ label{
 #symbolDiv{
     display: flex;
     gap: 15px;
-    align-items: center;
+
 }
+
+#numberDiv{
+    display: flex;
+    gap: 15px;
+}
+
