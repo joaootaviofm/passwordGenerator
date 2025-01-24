@@ -7,7 +7,22 @@
     <title>Random password generator</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div id="topDiv">
+            <h1>Random password generator</h1>
+            <input type="text" name="" id="outputPassword" placeholder="Crie uma senha">
+        </div>
+        <div id="includeDiv">
+            <div id="passwordSize">
+                <label for="pwordLength">Tamanho da senha:</label>
+                <input type="number" name="pwordLength" id="inputPasswordLength">
+            </div>
+            <div id="symbolDiv">
+                <label for="cSymbol">Incluir símbolos</label>
+                <input type="checkbox" name="cSymbol" id="checkSymbol">
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Smooch Sans;
+    font-size: 35px;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: #262626;
+}
+
+.container{
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+#topDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#topDiv h1{
+    font-size: 50px;
+}
+
+#outputPassword{
+    min-width: 100%;
+    text-align: center;
+    height: 35px;
+    border: 0.5px solid rgba(0, 0, 0, 0.329)
+}
+
+#includeDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputPasswordLength{
+    height: 30px;
+    text-align: center;
+}
+
+#passwordSize{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#passwordSize input{
+    height: 20px;
+    font-size: 20px;
+}
+
+label{
+    font-size: 25px;
+}
+
+#symbolDiv{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
