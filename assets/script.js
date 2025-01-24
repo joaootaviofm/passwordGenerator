@@ -83,19 +83,19 @@ generateButton.addEventListener('click', () =>{
     newResult.innerHTML = `Sua senha gerada é: ${password}`
     resultDiv.appendChild(newResult);
 
-    if(quantityCheck < 2 && length < 5){
-        passwordStrength.innerHTML = "Senha fraca!"
-        passwordStrength.style.color = "Red"
+    if(length <= 5 || quantityCheck < 2){
+        passwordStrength.innerHTML = "Senha fraca"
+        passwordStrength.style.color = "Green"
         resultDiv.appendChild(passwordStrength)
     }
-    else if(quantityCheck >= 3 && quantityCheck < 7 & length >= 5 && length < 9){
+    else if(length <= 10 || quantityCheck < 3){
         passwordStrength.innerHTML = "Senha média!"
         passwordStrength.style.color = "Orange"
         resultDiv.appendChild(passwordStrength)
     }
     else{
         passwordStrength.innerHTML = "Senha forte!"
-        passwordStrength.style.color = "Green"
+        passwordStrength.style.color = "Red"
         resultDiv.appendChild(passwordStrength)
     }
 
