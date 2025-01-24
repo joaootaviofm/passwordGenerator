@@ -19,9 +19,13 @@ generateButton.addEventListener('click', () =>{
 
     let myChars = ''
     var password = ''
-    
+    let quantityCheck = 0;
+
+
+
     if(symbolBox.checked){
         myChars = myChars + symbols;
+        quantityCheck++
     }
     else{
         myChars = myChars + ""
@@ -29,6 +33,7 @@ generateButton.addEventListener('click', () =>{
 
     if(numberBox.checked){
         myChars = myChars + numbers;
+        quantityCheck++
     }
     else{
         myChars = myChars + ""
@@ -36,6 +41,7 @@ generateButton.addEventListener('click', () =>{
     
     if(upperBox.checked){
         myChars = myChars + uppercase;
+        quantityCheck++
     }
     else{
         myChars = myChars + ""
@@ -43,6 +49,7 @@ generateButton.addEventListener('click', () =>{
 
     if(lowerBox.checked){
         myChars = myChars + lowercase;
+        quantityCheck++
     }
     else{
         myChars = myChars + "";
@@ -70,10 +77,27 @@ generateButton.addEventListener('click', () =>{
     
 
     const newResult = document.createElement('p')
+    const passwordStrength = document.createElement('p')
     const newButton = document.createElement('button')
 
     newResult.innerHTML = `Sua senha gerada é: ${password}`
     resultDiv.appendChild(newResult);
+
+    if(quantityCheck < 2 && length < 5){
+        passwordStrength.innerHTML = "Senha fraca!"
+        passwordStrength.style.color = "Red"
+        resultDiv.appendChild(passwordStrength)
+    }
+    else if(quantityCheck >= 3 && quantityCheck < 7 & length >= 5 && length < 9){
+        passwordStrength.innerHTML = "Senha média!"
+        passwordStrength.style.color = "Orange"
+        resultDiv.appendChild(passwordStrength)
+    }
+    else{
+        passwordStrength.innerHTML = "Senha forte!"
+        passwordStrength.style.color = "Green"
+        resultDiv.appendChild(passwordStrength)
+    }
 
     newButton.innerHTML = 'Clique para copiar'
     resultDiv.appendChild(newButton);
@@ -82,5 +106,6 @@ generateButton.addEventListener('click', () =>{
         navigator.clipboard.writeText(password)
         alert("Senha copiada para o clipboard!")
     })
+    
 })
 
