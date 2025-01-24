@@ -11,9 +11,10 @@ const numbers = "0123456789"
 const symbols = "~!@#$%^&*()_+"
 
 
+
 generateButton.addEventListener('click', () =>{
     let myChars = ''
-    let password = ''
+    var password = ''
     
     if(symbolBox.checked){
         myChars = myChars + symbols;
@@ -39,4 +40,16 @@ generateButton.addEventListener('click', () =>{
     if(lowerBox.checked){
         myChars = myChars + lowercase;
     }
+    else{
+        myChars = myChars + "";
+    }
+    
+    const length = passwordLength.value
+
+    for(let i=0;i<length;i++){
+        const randomIndex = Math.floor(Math.random() * myChars.length)
+        password += myChars[randomIndex]
+    }
+
+    console.log(password)
 })
