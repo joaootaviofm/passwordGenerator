@@ -11,7 +11,7 @@ Um gerador de senhas aleátorias com base nas opções que você escolhe que vai
 
 ## Como usar ❓
 
-Acesse -> 
+Acesse -> https://joaootaviofm.github.io/passwordGenerator/
   1) Selecione o tamanho da senha que você deseja gerar
   2) Selecione quais tipos de caracteres você deseja incluir na construção da senha
   3) Clique no botão GERAR SENHA
