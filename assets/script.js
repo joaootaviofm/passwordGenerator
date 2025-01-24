@@ -48,6 +48,18 @@ generateButton.addEventListener('click', () =>{
 
     const length = passwordLength.value
 
+
+    if(myChars.length === 0){
+        alert("Você precisa selecionar pelo menos um caractere!")
+        return
+    }
+
+    if(length <= 0){
+        alert("Sua senha é menor que 1")
+        return
+    }
+
+
     for(let i=0;i<length;i++){
         const randomIndex = Math.floor(Math.random() * myChars.length)
         password += myChars[randomIndex]
